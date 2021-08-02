@@ -2,7 +2,7 @@ import firebase from "firebase/app";
 import "firebase/database";
 
 const config = {
-  apiKey: "AIzaSyCqU43nuIflopnQYa9BRxZ4lITSKimiOQ0",
+  apiKey: `${process.env.REACT_APP_FIREBASE_KEY}`,
   authDomain: "ufosightings-8bf2a.firebaseapp.com",
   databaseURL: "https://ufosightings-8bf2a-default-rtdb.firebaseio.com",
   projectId: "ufosightings-8bf2a",
@@ -12,6 +12,6 @@ const config = {
   measurementId: "G-89MW7TVG9P",
 };
 
-let fire = firebase.initializeApp(config);
+firebase.initializeApp(config);
 
 export default firebase;
