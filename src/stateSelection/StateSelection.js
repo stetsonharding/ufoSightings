@@ -11,7 +11,7 @@ const StateSelection = (props) => {
         value={userStateSelection}
         onChange={(e) => setUserStateSelection(e.target.value)}
       >
-        <option selected>Select a State</option>
+        <option defaultValue>Select a State</option>
         <option value="al">Alabama</option>
         <option value="ak">Alaska</option>
         <option value="az">Arizona</option>

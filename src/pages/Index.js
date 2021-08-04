@@ -4,12 +4,15 @@ import StateSelection from "../stateSelection/StateSelection";
 
 const Index = () => {
   const [ufoSightings, setUfoSightings] = useState([]);
-  const [userStateSelection, setUserStateSelection] = useState();
+  const [userStateSelection, setUserStateSelection] = useState(
+    "No Location Selected"
+  );
+  // console.log(ufoSightings);
 
   useEffect(() => {
-    //refrencing firebase db
+    //referencing firebase db
     const ufoRef = firebase.database().ref("ufos");
-    //filtering through database searching for the spacific state the user is looking for
+    //filter database searching for spacific state user is looking for
     const query = ufoRef
       .orderByChild("state")
       .equalTo(`${userStateSelection}`)
@@ -22,7 +25,6 @@ const Index = () => {
   }, [userStateSelection]);
 
   console.log(ufoSightings);
-  console.log(userStateSelection);
 
   return (
     <StateSelection
