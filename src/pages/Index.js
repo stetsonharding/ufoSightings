@@ -8,6 +8,18 @@ import UfoCards from "../components/ufoCards/UfoCard";
 const Index = (props) => {
   const { setUserStateSelection, userStateSelection, ufoSightings } = props;
 
+  //looping through ufo sightings to display correct search in ufo cards.
+  const ufoItems = ufoSightings.map((sighting, index) => (
+    <UfoCards
+      key={index}
+      state={sighting.state}
+      city={sighting.city}
+      datetime={sighting.datetime}
+      shape={sighting.shape}
+      comments={sighting.comments}
+    />
+  ));
+
   return (
     <>
       <StateSelection
@@ -16,18 +28,7 @@ const Index = (props) => {
       />
 
       <Container>
-        <Row>
-          {ufoSightings.map((sighting) => (
-            <UfoCards
-              key={sighting.duration}
-              state={sighting.state}
-              city={sighting.city}
-              datetime={sighting.datetime}
-              shape={sighting.shape}
-              comments={sighting.comments}
-            />
-          ))}
-        </Row>
+        <Row>{ufoItems}</Row>
       </Container>
     </>
   );

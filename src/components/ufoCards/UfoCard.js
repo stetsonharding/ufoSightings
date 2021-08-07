@@ -5,7 +5,7 @@ import Card from "react-bootstrap/Card";
 
 export default function UfoCards(props) {
   return (
-    <Col key={props.duration} md={6} lg={3}>
+    <Col md={6} lg={3}>
       <Card.Body>
         <Card.Title>{props.state}</Card.Title>
         <Card.Subtitle className="mb-3 text-muted">

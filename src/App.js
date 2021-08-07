@@ -20,7 +20,7 @@ function App() {
     const query = ufoRef
       .orderByChild("state")
       .equalTo(`${userStateSelection}`)
-      .limitToFirst(50);
+      .limitToFirst(12);
 
     query.once("value").then((snapshot) => {
       //storing ufoSightings in state
