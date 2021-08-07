@@ -1,33 +1,12 @@
-import React, { useState, useEffect } from "react";
-import firebase from "../firebase";
-import StateSelection from "../stateSelection/StateSelection";
+import React from "react";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
 
-const Index = () => {
-  const [ufoSightings, setUfoSightings] = useState([]);
-  const [userStateSelection, setUserStateSelection] = useState("empty");
+import StateSelection from "../components/stateSelection/StateSelection";
+import UfoCards from "../components/ufoCards/UfoCard";
 
-  useEffect(() => {
-    let allUfo = [];
-
-    //referencing firebase db
-    const ufoRef = firebase.database().ref("ufos");
-    //filter database searching for spacific state user is looking for
-    const query = ufoRef
-      .orderByChild("state")
-      .equalTo(`${userStateSelection}`)
-      .limitToFirst(50);
-
-    query.once("value").then((snapshot) => {
-      //storing ufoSightings in state
-      snapshot.forEach((snap) => {
-        allUfo.push(snap.val());
-      });
-      setUfoSightings(allUfo);
-    });
-  }, [userStateSelection]);
-
-  //UFO sightings
-  // const results = ufoSightings.map((item) => <h1>{item.shape}</h1>);
+const Index = (props) => {
+  const { setUserStateSelection, userStateSelection, ufoSightings } = props;
 
   return (
     <>
@@ -35,6 +14,21 @@ const Index = () => {
         setUserStateSelection={setUserStateSelection}
         userStateSelection={userStateSelection}
       />
+
+      <Container>
+        <Row>
+          {ufoSightings.map((sighting) => (
+            <UfoCards
+              key={sighting.duration}
+              state={sighting.state}
+              city={sighting.city}
+              datetime={sighting.datetime}
+              shape={sighting.shape}
+              comments={sighting.comments}
+            />
+          ))}
+        </Row>
+      </Container>
     </>
   );
 };
