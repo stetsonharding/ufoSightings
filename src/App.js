@@ -10,6 +10,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 function App() {
   const [ufoSightings, setUfoSightings] = useState([]);
   const [userStateSelection, setUserStateSelection] = useState("empty");
+  const [lastState, setLastState] = useState("");
+  const [lastKey, setLastKey] = useState("");
 
   useEffect(() => {
     let allUfo = [];
@@ -26,12 +28,36 @@ function App() {
       //storing ufoSightings in state
       snapshot.forEach((snap) => {
         allUfo.push(snap.val());
+        setLastState(snap.val().state);
+        setLastKey(snap.key);
       });
       setUfoSightings(allUfo);
     });
   }, [userStateSelection]);
 
-  //UFO sightings
+  //start of pagination, need to move to pagination component.
+  function nextPage() {
+    let allUfo = [];
+    const query = firebase
+      .database()
+      .ref("ufos")
+      .orderByChild("state")
+      // .equalTo(`${userStateSelection}`)
+      .startAt(lastState, lastKey)
+      .limitToFirst(12);
+
+    query.once("value").then((snapshot) => {
+      //storing ufoSightings in state
+      snapshot.forEach((snap) => {
+        allUfo.push(snap.val());
+        setLastState(snap.val().state);
+        setLastKey(snap.key);
+      });
+      setUfoSightings(allUfo);
+    });
+  }
+
+  //UFO sightings console log testing.
   // const results = ufoSightings.map((item) => <h3>{item.city}</h3>);
 
   return (
@@ -41,6 +67,7 @@ function App() {
         userStateSelection={userStateSelection}
         ufoSightings={ufoSightings}
       />
+      <button onClick={() => nextPage()}>next</button>
     </>
   );
 }

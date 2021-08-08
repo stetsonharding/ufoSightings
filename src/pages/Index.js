@@ -1,6 +1,7 @@
 import React from "react";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
+import Pagination from "../components/pagination/Pagination";
 
 import StateSelection from "../components/stateSelection/StateSelection";
 import UfoCards from "../components/ufoCards/UfoCard";
@@ -30,6 +31,8 @@ const Index = (props) => {
       <Container>
         <Row>{ufoItems}</Row>
       </Container>
+
+      <Pagination />
     </>
   );
 };
