@@ -35,28 +35,6 @@ function App() {
     });
   }, [userStateSelection]);
 
-  //start of pagination, need to move to pagination component.
-  function nextPage() {
-    let allUfo = [];
-    const query = firebase
-      .database()
-      .ref("ufos")
-      .orderByChild("state")
-      // .equalTo(`${userStateSelection}`)
-      .startAt(lastState, lastKey)
-      .limitToFirst(12);
-
-    query.once("value").then((snapshot) => {
-      //storing ufoSightings in state
-      snapshot.forEach((snap) => {
-        allUfo.push(snap.val());
-        setLastState(snap.val().state);
-        setLastKey(snap.key);
-      });
-      setUfoSightings(allUfo);
-    });
-  }
-
   //UFO sightings console log testing.
   // const results = ufoSightings.map((item) => <h3>{item.city}</h3>);
 
@@ -66,8 +44,12 @@ function App() {
         setUserStateSelection={setUserStateSelection}
         userStateSelection={userStateSelection}
         ufoSightings={ufoSightings}
+        setUfoSightings={setUfoSightings}
+        lastKey={lastKey}
+        lastState={lastState}
+        setLastKey={setLastKey}
+        setLastState={setLastState}
       />
-      <button onClick={() => nextPage()}>next</button>
     </>
   );
 }
