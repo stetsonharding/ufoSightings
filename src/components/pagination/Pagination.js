@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import firebase from "firebase";
 
 //Bootstrap Components
@@ -28,11 +28,31 @@ export default function Pagination(props) {
       });
       setUfoSightings(allUfo);
     });
+
+    console.log(lastKey);
+    console.log(lastState);
   };
 
   //getting previous page of ufo sighting
   const previousPage = () => {
-    console.log("prev");
+    let allUfo = [];
+    const query = firebase
+      .database()
+      .ref("ufos")
+      .orderByChild("state")
+      .endBefore(lastKey, lastState)
+      .limitToFirst(12);
+
+    query.once("value").then((snapshot) => {
+      //storing ufoSightings, the last state and the last key in state,
+      //this is done to pick up where the user left off when switching pages.
+      snapshot.forEach((snap) => {
+        allUfo.push(snap.val());
+        setLastState(snap.val().state);
+        setLastKey(snap.key);
+      });
+      setUfoSightings(allUfo);
+    });
   };
 
   return (
