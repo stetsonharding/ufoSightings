@@ -15,7 +15,6 @@ function App() {
 
   useEffect(() => {
     let allUfo = [];
-
     //referencing firebase db
     const ufoRef = firebase.database().ref("ufos");
     //filter database searching for spacific state user is looking for
@@ -34,9 +33,6 @@ function App() {
       setUfoSightings(allUfo);
     });
   }, [userStateSelection]);
-
-  //UFO sightings console log testing.
-  // const results = ufoSightings.map((item) => <h3>{item.city}</h3>);
 
   return (
     <>

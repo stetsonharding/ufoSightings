@@ -2,25 +2,39 @@ import React from "react";
 
 import Col from "react-bootstrap/Col";
 import Card from "react-bootstrap/Card";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Button from "react-bootstrap/Button";
 
 export default function UfoCards(props) {
-  return (
-    <Col md={6} lg={3}>
+  const { ufoSightings, setIsModalShown } = props;
+
+  //looping though data to create individual ufo sightings.
+  const ufoItems = ufoSightings.map((sighting, index) => (
+    <Col md={6} lg={3} key={index}>
       <Card.Body>
-        <Card.Title>{props.state}</Card.Title>
+        <Card.Title>{sighting.state}</Card.Title>
         <Card.Subtitle className="mb-3 text-muted">
           {" "}
-          City: {props.city}
+          City: {sighting.city}
         </Card.Subtitle>
         <Card.Subtitle className="mb-3 text-muted">
-          Date/Time: {props.datetime}
+          Date/Time: {sighting.datetime}
         </Card.Subtitle>
         <Card.Subtitle className="mb-3 text-muted">
-          Shape: {props.shape}
+          Shape: {sighting.shape}
         </Card.Subtitle>
-        <Card.Text>{props.comments}</Card.Text>
-        <Card.Link href="#">Google Maps</Card.Link>
+        <Card.Text>{sighting.comments}</Card.Text>
+        <Button size="sm" onClick={() => setIsModalShown(true)}>
+          Google Maps
+        </Button>
       </Card.Body>
     </Col>
+  ));
+
+  return (
+    <Container>
+      <Row>{ufoItems}</Row>
+    </Container>
   );
 }

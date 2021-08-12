@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import firebase from "firebase";
 
 //Bootstrap Components
 import Button from "react-bootstrap/Button";
+import { Container } from "react-bootstrap";
 
 export default function Pagination(props) {
   const { lastKey, setLastKey, lastState, setLastState, setUfoSightings } =
@@ -56,11 +57,11 @@ export default function Pagination(props) {
   };
 
   return (
-    <div>
+    <Container>
       <Button onClick={previousPage}>Previous</Button>
       <Button onClick={nextPage} style={{ margin: "10px" }}>
         next
       </Button>
-    </div>
+    </Container>
   );
 }
