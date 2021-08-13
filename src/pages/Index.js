@@ -8,6 +8,8 @@ import GoogleMap from "../components/googleMap/GoogleMap";
 
 const Index = (props) => {
   const [isModalShown, setIsModalShown] = useState(false);
+  const [latitude, setLatitude] = useState(0);
+  const [longitude, setLongitude] = useState(0);
 
   const {
     setUserStateSelection,
@@ -27,7 +29,12 @@ const Index = (props) => {
         userStateSelection={userStateSelection}
       />
 
-      <UfoCards ufoSightings={ufoSightings} setIsModalShown={setIsModalShown} />
+      <UfoCards
+        ufoSightings={ufoSightings}
+        setIsModalShown={setIsModalShown}
+        setLatitude={setLatitude}
+        setLongitude={setLongitude}
+      />
 
       <Pagination
         lastKey={lastKey}
@@ -37,7 +44,13 @@ const Index = (props) => {
         setUfoSightings={setUfoSightings}
       />
 
-      <GoogleMap show={isModalShown} onHide={() => setIsModalShown(false)} />
+      <GoogleMap
+        show={isModalShown}
+        onHide={() => setIsModalShown(false)}
+        ufoSightings={ufoSightings}
+        latitude={latitude}
+        longitude={longitude}
+      />
     </>
   );
 };

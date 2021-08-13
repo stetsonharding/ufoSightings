@@ -7,7 +7,14 @@ import Row from "react-bootstrap/Row";
 import Button from "react-bootstrap/Button";
 
 export default function UfoCards(props) {
-  const { ufoSightings, setIsModalShown } = props;
+  const { ufoSightings, setIsModalShown, setLatitude, setLongitude } = props;
+
+  //getting lat and long for google maps.
+  function googleMapUfoSighting(sighting) {
+    setIsModalShown(true);
+    setLatitude(sighting.latitude);
+    setLongitude(sighting.longitude);
+  }
 
   //looping though data to create individual ufo sightings.
   const ufoItems = ufoSightings.map((sighting, index) => (
@@ -25,7 +32,7 @@ export default function UfoCards(props) {
           Shape: {sighting.shape}
         </Card.Subtitle>
         <Card.Text>{sighting.comments}</Card.Text>
-        <Button size="sm" onClick={() => setIsModalShown(true)}>
+        <Button size="sm" onClick={() => googleMapUfoSighting(sighting)}>
           Google Maps
         </Button>
       </Card.Body>
