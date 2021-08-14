@@ -1,8 +1,16 @@
+//utils
 import React, { useState, useEffect } from "react";
-import "./App.scss";
 import firebase from "./firebase";
 
+//components
+import Landing from "./pages/Landing";
 import Index from "./pages/Index";
+//sass
+
+import "./App.scss";
+//react router
+
+import { Switch, Route } from "react-router-dom";
 
 //bootstrap css
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -36,18 +44,26 @@ function App() {
 
   return (
     <>
-      <div className="test">
-        <Index
-          setUserStateSelection={setUserStateSelection}
-          userStateSelection={userStateSelection}
-          ufoSightings={ufoSightings}
-          setUfoSightings={setUfoSightings}
-          lastKey={lastKey}
-          lastState={lastState}
-          setLastKey={setLastKey}
-          setLastState={setLastState}
-        />
-      </div>
+      <div className="test"></div>
+
+      <Switch>
+        <Route exact path="/">
+          <Landing />
+        </Route>
+
+        <Route path="/ufoSightings">
+          <Index
+            setUserStateSelection={setUserStateSelection}
+            userStateSelection={userStateSelection}
+            ufoSightings={ufoSightings}
+            setUfoSightings={setUfoSightings}
+            lastKey={lastKey}
+            lastState={lastState}
+            setLastKey={setLastKey}
+            setLastState={setLastState}
+          />
+        </Route>
+      </Switch>
     </>
   );
 }
