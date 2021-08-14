@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./index.css";
+import "./App.scss";
 import firebase from "./firebase";
 
 import Index from "./pages/Index";
@@ -36,16 +36,18 @@ function App() {
 
   return (
     <>
-      <Index
-        setUserStateSelection={setUserStateSelection}
-        userStateSelection={userStateSelection}
-        ufoSightings={ufoSightings}
-        setUfoSightings={setUfoSightings}
-        lastKey={lastKey}
-        lastState={lastState}
-        setLastKey={setLastKey}
-        setLastState={setLastState}
-      />
+      <div className="test">
+        <Index
+          setUserStateSelection={setUserStateSelection}
+          userStateSelection={userStateSelection}
+          ufoSightings={ufoSightings}
+          setUfoSightings={setUfoSightings}
+          lastKey={lastKey}
+          lastState={lastState}
+          setLastKey={setLastKey}
+          setLastState={setLastState}
+        />
+      </div>
     </>
   );
 }
