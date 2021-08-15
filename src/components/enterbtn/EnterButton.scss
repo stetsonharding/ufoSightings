@@ -1,0 +1,22 @@
+@import "../../sassStyles/variables.scss";
+.enterButton {
+  padding: 5px 20px;
+  background-color: $black;
+  color: $mintGreen;
+  border: 1px solid $white;
+  border-radius: 5px;
+  font-size: 20px;
+  transition: 1s;
+}
+
+.enterButton:hover {
+  transition: 0.5s;
+
+  box-shadow: 0 0 30px 20px rgb(255, 255, 255),
+    /* inner white */ 0 0 100px 60px rgb(65, 2, 65),
+    /* middle magenta */ 0 0 140px 90px #0ff; /* outer cyan */
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  border: 1px solid rgb(65, 2, 65);
+}

@@ -1,0 +1,15 @@
+.landingPage_container {
+  height: 100vh;
+  background-color: black;
+  background-image: url(../assets/LandingPage.jfif);
+  width: 100vw;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: 700px;
+  object-fit: cover;
+  background-position: 10% 65%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

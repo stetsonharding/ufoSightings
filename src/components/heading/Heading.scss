@@ -1,0 +1,21 @@
+@import "../../sassStyles/variables.scss";
+
+.heading_container {
+  text-align: center;
+  h1 {
+    color: $white;
+    font-size: 5em;
+    text-transform: capitalize;
+  }
+  span {
+    color: $mintGreen;
+  }
+  //subHeading
+  p {
+    color: $white;
+    text-align: center;
+    margin-top: 30px;
+    font-size: $h1;
+    text-transform: capitalize;
+  }
+}
