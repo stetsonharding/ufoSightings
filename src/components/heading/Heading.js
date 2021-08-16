@@ -11,7 +11,7 @@ export default function Heading() {
         <h1 className="ufoHeading">
           Greetings, <span>Earthling.</span>
         </h1>
-        <p> UFO sightings, around the United States.</p>
+        <p>UFO sightings around the united states.</p>
         <EnterButton />
       </div>
     </>
