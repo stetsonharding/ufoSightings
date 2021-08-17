@@ -1,16 +1,54 @@
 @import "../../sassStyles/variables.scss";
 
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+//form
 .stateSelection_form {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 3em;
+  background-color: black;
+  border-radius: 10px;
+  font-family: monospace, Arial, Helvetica, sans-serif;
+  //scrollbar
+  /* width */
+  ::-webkit-scrollbar {
+    width: 7px;
+  }
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #210036;
+  }
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: $mintGreen;
+  }
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(248, 246, 246);
+  }
 }
+// ================== //
 
+//state selection
 .stateSelection_select {
   width: 60%;
-  color: $mintGreen;
-  border: 1px solid white;
+  color: white;
+  border: 1.5px solid $mintGreen;
   padding: 1em;
+  border-radius: 10px;
 }
+.stateSelection_select:hover {
+  animation: blinker 2s linear infinite;
+  border: 1px solid $mintGreen;
+}
+.stateSelection_select:focus {
+  outline: none;
+}
+// ================== //

@@ -12,11 +12,10 @@
 .enterButton:hover {
   transition: 0.5s;
 
-  box-shadow: 0 0 30px 20px rgb(255, 255, 255),
-    /* inner white */ 0 0 100px 60px rgb(65, 2, 65),
-    /* middle magenta */ 0 0 140px 90px #0ff; /* outer cyan */
+  box-shadow: 0 0 40px 40px rgb(255, 255, 255), 0 0 100px 60px rgb(65, 2, 65),
+    0 0 80px 60px #0ff;
   background-color: white;
   color: black;
-  font-weight: bold;
-  border: 1px solid rgb(65, 2, 65);
+
+  border: 3px solid black;
 }
