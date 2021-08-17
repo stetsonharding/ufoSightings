@@ -16,6 +16,7 @@
   background-color: black;
   border-radius: 10px;
   font-family: monospace, Arial, Helvetica, sans-serif;
+
   //scrollbar
   /* width */
   ::-webkit-scrollbar {
@@ -43,6 +44,7 @@
   border: 1.5px solid $mintGreen;
   padding: 1em;
   border-radius: 10px;
+  background-color: black;
 }
 .stateSelection_select:hover {
   animation: blinker 2s linear infinite;
