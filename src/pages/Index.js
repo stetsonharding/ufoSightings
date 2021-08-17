@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 
+import "./Index.scss";
+
 // Components
 import Pagination from "../components/pagination/Pagination";
 import StateSelection from "../components/stateSelection/StateSelection";

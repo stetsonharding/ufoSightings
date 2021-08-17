@@ -1,11 +1,14 @@
 import React from "react";
 
+import "./StateSelection.scss";
+
 const StateSelection = (props) => {
   const { userStateSelection, setUserStateSelection } = props;
 
   return (
-    <form>
+    <form className="stateSelection_form">
       <select
+        className="stateSelection_select"
         name="state"
         id="state"
         value={userStateSelection}

@@ -1,0 +1,16 @@
+@import "../../sassStyles/variables.scss";
+
+.stateSelection_form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3em;
+}
+
+.stateSelection_select {
+  width: 60%;
+  color: $mintGreen;
+  border: 1px solid white;
+  padding: 1em;
+}
