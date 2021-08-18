@@ -3,7 +3,12 @@ import React from "react";
 import "./StateSelection.scss";
 
 const StateSelection = (props) => {
-  const { userStateSelection, setUserStateSelection } = props;
+  const { userStateSelection, setUserStateSelection, setIsIconShown } = props;
+
+  function stateSelection(e) {
+    setUserStateSelection(e.target.value);
+    setIsIconShown(false);
+  }
 
   return (
     <form className="stateSelection_form">
@@ -12,7 +17,7 @@ const StateSelection = (props) => {
         name="state"
         id="state"
         value={userStateSelection}
-        onChange={(e) => setUserStateSelection(e.target.value)}
+        onChange={stateSelection}
       >
         <option defaultValue>Select a State</option>
         <option value="al">Alabama</option>

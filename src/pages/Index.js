@@ -7,11 +7,13 @@ import Pagination from "../components/pagination/Pagination";
 import StateSelection from "../components/stateSelection/StateSelection";
 import UfoCards from "../components/ufoCards/UfoCard";
 import GoogleMap from "../components/googleMap/GoogleMap";
+import UfoGiff from "../components/ufoGiff/UfoGiff";
 
 const Index = (props) => {
   const [isModalShown, setIsModalShown] = useState(false);
   const [latitude, setLatitude] = useState(0);
   const [longitude, setLongitude] = useState(0);
+  const [isIconShown, setIsIconShown] = useState(true);
 
   const {
     setUserStateSelection,
@@ -29,6 +31,7 @@ const Index = (props) => {
       <StateSelection
         setUserStateSelection={setUserStateSelection}
         userStateSelection={userStateSelection}
+        setIsIconShown={setIsIconShown}
       />
 
       <UfoCards
@@ -38,14 +41,19 @@ const Index = (props) => {
         setLongitude={setLongitude}
       />
 
-      <Pagination
-        lastKey={lastKey}
-        setLastKey={setLastKey}
-        lastState={lastState}
-        setLastState={setLastState}
-        setUfoSightings={setUfoSightings}
-      />
-
+      {isIconShown ? (
+        <>
+          <UfoGiff />
+        </>
+      ) : (
+        <Pagination
+          lastKey={lastKey}
+          setLastKey={setLastKey}
+          lastState={lastState}
+          setLastState={setLastState}
+          setUfoSightings={setUfoSightings}
+        />
+      )}
       <GoogleMap
         show={isModalShown}
         onHide={() => setIsModalShown(false)}
