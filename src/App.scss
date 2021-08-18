@@ -1,4 +1,18 @@
 html {
   background-color: black;
-  overflow: hidden;
+  ::-webkit-scrollbar {
+    width: 4px;
+  }
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #e7e2e2;
+  }
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(53, 2, 94);
+  }
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(121, 40, 40);
+  }
 }

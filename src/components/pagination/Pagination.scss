@@ -3,12 +3,9 @@
 .button_container {
   display: flex;
   justify-content: space-between;
-  margin-top: 3em;
+  margin: 3em;
 }
 .button_container:hover {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 3em;
   cursor: pointer;
 }
 
