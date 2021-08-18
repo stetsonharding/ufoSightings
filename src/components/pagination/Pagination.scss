@@ -1,0 +1,25 @@
+@import "../../sassStyles/variables.scss";
+
+.button_container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3em;
+}
+.button_container:hover {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3em;
+  cursor: pointer;
+}
+
+.previousBtn,
+.nextBtn {
+  color: white;
+  border: 3px solid $mintGreen;
+  border-radius: 5px;
+}
+
+.previousBtn:hover,
+.nextBtn:hover {
+  opacity: 0.5;
+}

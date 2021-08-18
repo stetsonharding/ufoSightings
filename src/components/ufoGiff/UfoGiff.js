@@ -1,19 +1,7 @@
 import React from "react";
 
-const centerContainer = {
-  display: "flex",
-  justifyContent: "center",
-  alignItems: "center",
-  width: "100vw",
-  height: "100vh",
-};
+import "./UfoGiff.scss";
 
-const centerGiff = {
-  display: "flex",
-  justifyContent: "center",
-  alignItems: "center",
-  flexDirection: "column",
-};
 const giffHeading = {
   color: "white",
   textTransform: "capitalize",
@@ -22,9 +10,10 @@ const giffHeading = {
 
 function UfoGiff() {
   return (
-    <div className="ufoGiff_Wrapper" style={centerContainer}>
-      <div className="ufoGiff_Container" style={centerGiff}>
+    <div className="ufoGiff_Wrapper">
+      <div className="ufoGiff_Container">
         <iframe
+          className="ufoGiff"
           title="hello"
           src="https://giphy.com/embed/26BoCVdjSJOWT0Fpu"
           width="480"
@@ -33,7 +22,7 @@ function UfoGiff() {
           // class="giphy-embed"
           allowFullScreen
         ></iframe>
-        <h2 style={giffHeading}>Select your state to view all UFO sightings</h2>
+        <h3 style={giffHeading}>Tracking UFOs...</h3>
       </div>
     </div>
   );

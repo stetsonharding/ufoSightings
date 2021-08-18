@@ -1,0 +1,20 @@
+@import "../../sassStyles//variables.scss";
+
+.ufoGiff_Wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+.ufoGiff_Container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+//disable hover on giff
+.ufoGiff {
+  pointer-events: none;
+}
