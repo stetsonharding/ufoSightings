@@ -1,0 +1,19 @@
+.cardBody {
+  height: 320px;
+  display: flex;
+  flex-direction: column;
+}
+
+.googleMapContainer {
+  flex-grow: 1;
+  position: relative;
+}
+
+.googleMapIcon {
+  position: absolute;
+  bottom: 0;
+}
+
+.googleMapIcon:hover {
+  cursor: pointer;
+}

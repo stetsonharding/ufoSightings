@@ -1,12 +1,7 @@
 import React from "react";
 
+//syles
 import "./UfoGiff.scss";
-
-const giffHeading = {
-  color: "white",
-  textTransform: "capitalize",
-  letterSpacing: "1px",
-};
 
 function UfoGiff() {
   return (
@@ -19,10 +14,9 @@ function UfoGiff() {
           width="480"
           height="360"
           frameBorder="0"
-          // class="giphy-embed"
           allowFullScreen
         ></iframe>
-        <h3 style={giffHeading}>Tracking UFOs...</h3>
+        <h3 className="UfoGiff_heading">Tracking UFOs...</h3>
       </div>
     </div>
   );

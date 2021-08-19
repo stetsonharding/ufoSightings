@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 
+//syles
 import "./Index.scss";
 
 // Components
