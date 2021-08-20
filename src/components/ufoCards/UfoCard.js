@@ -26,17 +26,25 @@ export default function UfoCards(props) {
 
   //looping though data to create individual ufo sightings.
   const ufoItems = ufoSightings.map((sighting, index) => (
-    <Col md={6} lg={6} xl={3} key={index}>
+    <Col
+      md={6}
+      lg={6}
+      xl={3}
+      key={index}
+      className="UfoCard_ UfoCardContainer mt-5"
+    >
       <Card.Body className="UfoCard_ cardBody">
-        <Card.Title>{sighting.state}</Card.Title>
-        <Card.Subtitle className="mb-3 text-muted">
-          {" "}
-          City: {sighting.city}
+        {/* <Card.Title>{sighting.state}</Card.Title> */}
+        <Card.Subtitle className="mb-3  Subtitle">
+          <span className="span_subTitle">City:</span> <p>{sighting.city}</p>
         </Card.Subtitle>
         <Card.Subtitle className="mb-3 text-muted">
           Date/Time: {sighting.datetime}
         </Card.Subtitle>
-        <Card.Subtitle className="mb-3 text-muted">
+        <Card.Subtitle
+          className="mb-3 text-muted"
+          style={{ textTransform: "capitalize" }}
+        >
           Shape: {sighting.shape}
         </Card.Subtitle>
         <Card.Text>{sighting.comments}</Card.Text>
@@ -47,6 +55,9 @@ export default function UfoCards(props) {
             alt="Google map Icon"
             onClick={() => googleMapUfoSighting(sighting)}
           />
+          <div className="UfoCard__ uponHoverText">
+            <p>View on Google Maps</p>
+          </div>
         </div>
       </Card.Body>
     </Col>

@@ -1,3 +1,25 @@
+//col
+.UfoCardContainer {
+  border-bottom: 1.5px solid rgb(9, 137, 146);
+  border-radius: 10px;
+}
+
+.UfoCardContainer:nth-child(even) {
+  background-color: #070707;
+}
+
+.Subtitle {
+  color: rgb(104, 10, 141);
+
+  .span_subTitle {
+    // color: rgb(155, 150, 150);
+  }
+  p {
+    text-transform: capitalize;
+    display: inline;
+  }
+}
+
 .cardBody {
   height: 320px;
   display: flex;
@@ -16,4 +38,21 @@
 
 .googleMapIcon:hover {
   cursor: pointer;
+  background-color: rgb(104, 10, 141);
+  border-radius: 10px;
+}
+
+//google map text pop up upon hover.
+.googleMapContainer:hover .uponHoverText {
+  display: block;
+}
+.uponHoverText {
+  display: none;
+  position: absolute;
+  top: 80%;
+  bottom: 0%;
+  left: 15%;
+  right: 5%;
+  color: white;
+  font-size: 16px;
 }
