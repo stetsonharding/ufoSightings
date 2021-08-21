@@ -36,18 +36,20 @@ export default function UfoCards(props) {
       <Card.Body className="UfoCard_ cardBody">
         {/* <Card.Title>{sighting.state}</Card.Title> */}
         <Card.Subtitle className="mb-3  Subtitle">
-          <span className="span_subTitle">City:</span> <p>{sighting.city}</p>
+          <span className="span_subTitle"></span> <p>{sighting.city}</p>
         </Card.Subtitle>
-        <Card.Subtitle className="mb-3 text-muted">
-          Date/Time: {sighting.datetime}
-        </Card.Subtitle>
-        <Card.Subtitle
-          className="mb-3 text-muted"
-          style={{ textTransform: "capitalize" }}
-        >
+        <Card.Subtitle className="mb-3 Subtitle">
           Shape: {sighting.shape}
         </Card.Subtitle>
-        <Card.Text>{sighting.comments}</Card.Text>
+        <Card.Subtitle
+          className="mb-3 Subtitle"
+          style={{ textTransform: "capitalize" }}
+        >
+          Date & Time: {sighting.datetime}
+        </Card.Subtitle>
+        <Card.Text className="ufoCard__ description">
+          {sighting.comments}
+        </Card.Text>
         <div className="UfoCard__ googleMapContainer">
           <img
             className="UfoCard__ googleMapIcon"

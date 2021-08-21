@@ -1,23 +1,41 @@
 //col
 .UfoCardContainer {
-  border-bottom: 1.5px solid rgb(9, 137, 146);
-  border-radius: 10px;
+  border-radius: 20px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.UfoCardContainer:hover {
+  border: 1px solid rgb(24, 231, 180);
+  box-shadow: none;
 }
 
 .UfoCardContainer:nth-child(even) {
-  background-color: #070707;
+  background-color: #0a0a0a;
+}
+.UfoCardContainer:nth-child(odd) {
+  background-color: #080808;
 }
 
+//subtitle
 .Subtitle {
-  color: rgb(104, 10, 141);
+  color: #770ca8;
+  text-align: center;
 
   .span_subTitle {
-    // color: rgb(155, 150, 150);
+    font-size: 16px;
+    font-weight: bolder;
   }
   p {
     text-transform: capitalize;
     display: inline;
+    font-size: 18px;
+    font-weight: bolder;
   }
+}
+
+.description {
+  color: #fcfbfe;
+  text-align: center;
 }
 
 .cardBody {
@@ -38,7 +56,7 @@
 
 .googleMapIcon:hover {
   cursor: pointer;
-  background-color: rgb(104, 10, 141);
+  background-color: #660094;
   border-radius: 10px;
 }
 
