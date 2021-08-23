@@ -36,7 +36,8 @@ const Index = (props) => {
         setIsIconShown={setIsIconShown}
       />
 
-      <Title />
+      {isIconShown ? null : <Title />}
+
       <UfoCards
         ufoSightings={ufoSightings}
         setIsModalShown={setIsModalShown}
