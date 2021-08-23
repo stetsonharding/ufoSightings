@@ -19,3 +19,10 @@
     text-transform: capitalize;
   }
 }
+
+//fixing heading size for mobile devices
+@media (max-width: 576px) {
+  .heading_container h1 {
+    font-size: 3em;
+  }
+}

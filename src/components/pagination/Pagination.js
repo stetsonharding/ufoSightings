@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import firebase from "firebase";
 
 import "./Pagination.scss";
@@ -9,6 +9,11 @@ import { Container } from "react-bootstrap";
 export default function Pagination(props) {
   const { lastKey, setLastKey, lastState, setLastState, setUfoSightings } =
     props;
+
+  //scroll to top of page when component re renders
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  });
 
   //getting next page of ufo sightings
   const nextPage = () => {

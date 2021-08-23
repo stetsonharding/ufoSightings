@@ -21,14 +21,10 @@
   color: #770ca8;
   text-align: center;
 
-  .span_subTitle {
-    font-size: 16px;
-    font-weight: bolder;
-  }
   p {
     text-transform: capitalize;
     display: inline;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: bolder;
   }
 }
@@ -61,16 +57,28 @@
 }
 
 //google map text pop up upon hover.
-.googleMapContainer:hover .uponHoverText {
+.UfoCardContainer:hover .googleMapIcon,
+.UfoCardContainer:hover .uponHoverText {
   display: block;
 }
 .uponHoverText {
   display: none;
   position: absolute;
-  top: 80%;
+  top: 70%;
   bottom: 0%;
   left: 15%;
   right: 5%;
+  color: white;
+  font-size: 16px;
+}
+
+.googleMapIcon {
+  display: none;
+  position: absolute;
+  top: 65%;
+  bottom: 0%;
+  left: 0%;
+  right: 40%;
   color: white;
   font-size: 16px;
 }
