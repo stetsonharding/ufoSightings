@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/static/css/main.b757b5ac.chunk.css",
-    "main.js": "/static/js/main.b031567f.chunk.js",
-    "main.js.map": "/static/js/main.b031567f.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.b943d919.js",
-    "runtime-main.js.map": "/static/js/runtime-main.b943d919.js.map",
-    "static/css/2.818011ed.chunk.css": "/static/css/2.818011ed.chunk.css",
-    "static/js/2.9a77ee6f.chunk.js": "/static/js/2.9a77ee6f.chunk.js",
-    "static/js/2.9a77ee6f.chunk.js.map": "/static/js/2.9a77ee6f.chunk.js.map",
-    "index.html": "/index.html",
-    "static/css/2.818011ed.chunk.css.map": "/static/css/2.818011ed.chunk.css.map",
-    "static/css/main.b757b5ac.chunk.css.map": "/static/css/main.b757b5ac.chunk.css.map",
-    "static/js/2.9a77ee6f.chunk.js.LICENSE.txt": "/static/js/2.9a77ee6f.chunk.js.LICENSE.txt",
-    "static/media/GoogleMapIcon.07143ad7.svg": "/static/media/GoogleMapIcon.07143ad7.svg",
-    "static/media/Landing.scss": "/static/media/LandingPage.0284d895.jfif"
+    "main.css": "/ufoSightingsstatic/css/main.b4dd2d6e.chunk.css",
+    "main.js": "/ufoSightingsstatic/js/main.b031567f.chunk.js",
+    "main.js.map": "/ufoSightingsstatic/js/main.b031567f.chunk.js.map",
+    "runtime-main.js": "/ufoSightingsstatic/js/runtime-main.d183de93.js",
+    "runtime-main.js.map": "/ufoSightingsstatic/js/runtime-main.d183de93.js.map",
+    "static/css/2.818011ed.chunk.css": "/ufoSightingsstatic/css/2.818011ed.chunk.css",
+    "static/js/2.9a7cd5d4.chunk.js": "/ufoSightingsstatic/js/2.9a7cd5d4.chunk.js",
+    "static/js/2.9a7cd5d4.chunk.js.map": "/ufoSightingsstatic/js/2.9a7cd5d4.chunk.js.map",
+    "index.html": "/ufoSightingsindex.html",
+    "static/css/2.818011ed.chunk.css.map": "/ufoSightingsstatic/css/2.818011ed.chunk.css.map",
+    "static/css/main.b4dd2d6e.chunk.css.map": "/ufoSightingsstatic/css/main.b4dd2d6e.chunk.css.map",
+    "static/js/2.9a7cd5d4.chunk.js.LICENSE.txt": "/ufoSightingsstatic/js/2.9a7cd5d4.chunk.js.LICENSE.txt",
+    "static/media/GoogleMapIcon.07143ad7.svg": "/ufoSightingsstatic/media/GoogleMapIcon.07143ad7.svg",
+    "static/media/Landing.scss": "/ufoSightingsstatic/media/LandingPage.0284d895.jfif"
   },
   "entrypoints": [
-    "static/js/runtime-main.b943d919.js",
+    "static/js/runtime-main.d183de93.js",
     "static/css/2.818011ed.chunk.css",
-    "static/js/2.9a77ee6f.chunk.js",
-    "static/css/main.b757b5ac.chunk.css",
+    "static/js/2.9a7cd5d4.chunk.js",
+    "static/css/main.b4dd2d6e.chunk.css",
     "static/js/main.b031567f.chunk.js"
   ]
 }
