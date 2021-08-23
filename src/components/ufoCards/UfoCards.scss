@@ -29,9 +29,17 @@
   }
 }
 
-.description {
+.datetime,
+.shape {
   color: #fcfbfe;
   text-align: center;
+  text-transform: capitalize;
+}
+
+.description {
+  color: rgb(94, 194, 233);
+  text-align: center;
+  letter-spacing: 1px;
 }
 
 .cardBody {
@@ -81,4 +89,28 @@
   right: 40%;
   color: white;
   font-size: 16px;
+}
+
+@media (max-width: 1200px) {
+  .uponHoverText {
+    display: inline;
+    position: absolute;
+    top: 70%;
+    bottom: 0%;
+    left: 15%;
+    right: 5%;
+    color: white;
+    font-size: 16px;
+  }
+
+  .googleMapIcon {
+    display: inline;
+    position: absolute;
+    top: 65%;
+    bottom: 0%;
+    left: 0%;
+    right: 40%;
+    color: white;
+    font-size: 16px;
+  }
 }

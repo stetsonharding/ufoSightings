@@ -9,6 +9,7 @@ import StateSelection from "../components/stateSelection/StateSelection";
 import UfoCards from "../components/ufoCards/UfoCard";
 import GoogleMap from "../components/googleMap/GoogleMap";
 import UfoGiff from "../components/ufoGiff/UfoGiff";
+import Title from "../components/title/Title";
 
 const Index = (props) => {
   const [isModalShown, setIsModalShown] = useState(false);
@@ -35,6 +36,7 @@ const Index = (props) => {
         setIsIconShown={setIsIconShown}
       />
 
+      <Title />
       <UfoCards
         ufoSightings={ufoSightings}
         setIsModalShown={setIsModalShown}

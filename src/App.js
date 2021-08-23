@@ -26,20 +26,24 @@ function App() {
     //referencing firebase db
     const ufoRef = firebase.database().ref("ufos");
     //filter database searching for spacific state user is looking for
-    const query = ufoRef
-      .orderByChild("state")
-      .equalTo(`${userStateSelection}`)
-      .limitToFirst(12);
+    try {
+      const query = ufoRef
+        .orderByChild("state")
+        .equalTo(`${userStateSelection}`)
+        .limitToFirst(12);
 
-    query.once("value").then((snapshot) => {
-      //storing ufoSightings in state
-      snapshot.forEach((snap) => {
-        allUfo.push(snap.val());
-        setLastState(snap.val().state);
-        setLastKey(snap.key);
+      query.once("value").then((snapshot) => {
+        //storing ufoSightings in state
+        snapshot.forEach((snap) => {
+          allUfo.push(snap.val());
+          setLastState(snap.val().state);
+          setLastKey(snap.key);
+        });
+        setUfoSightings(allUfo);
       });
-      setUfoSightings(allUfo);
-    });
+    } catch (error) {
+      console.log(new Error("hello"));
+    }
   }, [userStateSelection]);
 
   return (

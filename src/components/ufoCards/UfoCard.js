@@ -38,11 +38,11 @@ export default function UfoCards(props) {
         <Card.Subtitle className="mb-3  Subtitle">
           <span className="span_subTitle"></span> <p>{sighting.city}</p>
         </Card.Subtitle>
-        <Card.Subtitle className="mb-3 Subtitle">
+        <Card.Subtitle className="mb-3 shape">
           Shape: {sighting.shape}
         </Card.Subtitle>
         <Card.Subtitle
-          className="mb-3 Subtitle"
+          className="mb-3 datetime"
           style={{ textTransform: "capitalize" }}
         >
           Date & Time: {sighting.datetime}
