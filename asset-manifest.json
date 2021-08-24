@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/ufoSightings/static/css/main.135979c6.chunk.css",
-    "main.js": "/ufoSightings/static/js/main.eea7697d.chunk.js",
-    "main.js.map": "/ufoSightings/static/js/main.eea7697d.chunk.js.map",
+    "main.css": "/ufoSightings/static/css/main.d1a23f93.chunk.css",
+    "main.js": "/ufoSightings/static/js/main.12c4e2fc.chunk.js",
+    "main.js.map": "/ufoSightings/static/js/main.12c4e2fc.chunk.js.map",
     "runtime-main.js": "/ufoSightings/static/js/runtime-main.5aa86846.js",
     "runtime-main.js.map": "/ufoSightings/static/js/runtime-main.5aa86846.js.map",
     "static/css/2.818011ed.chunk.css": "/ufoSightings/static/css/2.818011ed.chunk.css",
@@ -10,7 +10,7 @@
     "static/js/2.5dfb39ed.chunk.js.map": "/ufoSightings/static/js/2.5dfb39ed.chunk.js.map",
     "index.html": "/ufoSightings/index.html",
     "static/css/2.818011ed.chunk.css.map": "/ufoSightings/static/css/2.818011ed.chunk.css.map",
-    "static/css/main.135979c6.chunk.css.map": "/ufoSightings/static/css/main.135979c6.chunk.css.map",
+    "static/css/main.d1a23f93.chunk.css.map": "/ufoSightings/static/css/main.d1a23f93.chunk.css.map",
     "static/js/2.5dfb39ed.chunk.js.LICENSE.txt": "/ufoSightings/static/js/2.5dfb39ed.chunk.js.LICENSE.txt",
     "static/media/GoogleMapIcon.07143ad7.svg": "/ufoSightings/static/media/GoogleMapIcon.07143ad7.svg",
     "static/media/Landing.scss": "/ufoSightings/static/media/LandingPage.0284d895.jfif"
@@ -19,7 +19,7 @@
     "static/js/runtime-main.5aa86846.js",
     "static/css/2.818011ed.chunk.css",
     "static/js/2.5dfb39ed.chunk.js",
-    "static/css/main.135979c6.chunk.css",
-    "static/js/main.eea7697d.chunk.js"
+    "static/css/main.d1a23f93.chunk.css",
+    "static/js/main.12c4e2fc.chunk.js"
   ]
 }
