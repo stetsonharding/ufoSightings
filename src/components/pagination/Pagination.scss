@@ -2,9 +2,10 @@
 
 .button_container {
   display: flex;
-  justify-content: space-between;
-  margin: 3em;
+  justify-content: space-evenly;
+  margin: 3rem auto;
 }
+
 .button_container:hover {
   cursor: pointer;
 }
@@ -12,8 +13,9 @@
 .previousBtn,
 .nextBtn {
   color: $white;
-  border: 3px solid $mintGreen;
+  // border: 3px solid $mintGreen;
   border-radius: 5px;
+  margin: 0 3em;
 }
 
 .previousBtn:hover,
