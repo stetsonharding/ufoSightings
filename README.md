@@ -15,10 +15,17 @@
  1. Clean reusable styling.
  ---
  # *Challenges*
- 1. This is the first application I have built that used Firebase's Real Time Database. I needed to figure out how to upload the UFO data in my database and get all the data from Firebase as needed. The following code snippet is how I fetched all the data needed. Note I placed this in the useEffect hook to fetch the data upon rendering.
  ---
+ 1. This is the first application I have built that used Firebase's Real Time Database. I needed to figure out how to upload the UFO data in my database and get all the data from Firebase as needed. The following code snippet is how I fetched all the data needed. Note I placed this in the useEffect hook to fetch the data upon rendering.
 ![ds](https://user-images.githubusercontent.com/19699378/210435117-5488a4d0-dac1-4828-b7b7-707bb079a49d.JPG)
-
+---
+# Run Project Locally
+1. Clone Repo.
+2. run npm install in terminal.
+3. run npm start to run project locally.
+---
+# Hosted Project
+https://stetsonharding.github.io/ufoSightings/#/
 
  
 
